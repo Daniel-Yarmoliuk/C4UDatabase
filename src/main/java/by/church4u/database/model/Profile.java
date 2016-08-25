@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Profile
 {
 
+    private long itsProfileId;
     private String itsSurname;
     private String itsName;
     private String itsPatronymic;
@@ -30,12 +31,13 @@ public class Profile
 
     }
 
-    public Profile(final String aSurname, final String aName, final String aPatronymic, final Date aDateOfBirth,
-            final String anAddress, final String aPhone, final String anIndex, final Date aBaptizedOnDate,
-            final boolean aBaptismOfTheHolySpirit, final String aSpecialty, final boolean aFromAnotherChurch,
-            final String aTheNameOfAnotherChurch, final Date anArrivalDate, final boolean aWidow,
-            final boolean aDivorced, final boolean aDisabilityGroup)
+    public Profile(final long aProfileId, final String aSurname, final String aName, final String aPatronymic,
+            final Date aDateOfBirth, final String anAddress, final String aPhone, final String anIndex,
+            final Date aBaptizedOnDate, final boolean aBaptismOfTheHolySpirit, final String aSpecialty,
+            final boolean aFromAnotherChurch, final String aTheNameOfAnotherChurch, final Date anArrivalDate,
+            final boolean aWidow, final boolean aDivorced, final boolean aDisabilityGroup)
     {
+        this.itsProfileId = aProfileId;
         this.itsSurname = aSurname;
         this.itsName = aName;
         this.itsPatronymic = aPatronymic;
@@ -54,68 +56,88 @@ public class Profile
         this.itsDisabilityGroup = aDisabilityGroup;
     }
 
+    public long getProfileId()
+    {
+        return itsProfileId;
+    }
+
     public String getSurname()
     {
         return itsSurname;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return itsName;
     }
 
-    public Date getDateOfBirth() {
+    public Date getDateOfBirth()
+    {
         return itsDateOfBirth;
     }
 
-    public String getAddress() {
+    public String getAddress()
+    {
         return itsAddress;
     }
 
-    public String getPhone() {
+    public String getPhone()
+    {
         return itsPhone;
     }
 
-    public String getIndex() {
+    public String getIndex()
+    {
         return itsIndex;
     }
 
-    public Date getBaptizedOnDate() {
+    public Date getBaptizedOnDate()
+    {
         return itsBaptizedOnDate;
     }
 
-    public boolean getBaptismOfTheHolySpirit() {
+    public boolean getBaptismOfTheHolySpirit()
+    {
         return itsBaptismOfTheHolySpirit;
     }
 
-    public String getSpecialty() {
+    public String getSpecialty()
+    {
         return itsSpecialty;
     }
 
-    public boolean getFromAnotherChurch() {
+    public boolean getFromAnotherChurch()
+    {
         return itsFromAnotherChurch;
     }
 
-    public String getTheNameOfAnotherChurch() {
+    public String getTheNameOfAnotherChurch()
+    {
         return itsTheNameOfAnotherChurch;
     }
 
-    public Date getArrivalDate() {
+    public Date getArrivalDate()
+    {
         return itsArrivalDate;
     }
 
-    public boolean getWidow() {
+    public boolean getWidow()
+    {
         return itsWidow;
     }
 
-    public boolean getDivorced() {
+    public boolean getDivorced()
+    {
         return itsDivorced;
     }
 
-    public boolean getDisabilityGroup() {
+    public boolean getDisabilityGroup()
+    {
         return itsDisabilityGroup;
     }
 
-    public String getPatronymic() {
+    public String getPatronymic()
+    {
         return itsPatronymic;
     }
 }
