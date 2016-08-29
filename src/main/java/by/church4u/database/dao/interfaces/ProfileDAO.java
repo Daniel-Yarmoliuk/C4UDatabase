@@ -27,16 +27,16 @@ public interface ProfileDAO
     public List<Profile> getAllProfile();
 
     /**
+     * edit profile
+     *
+     * @param aProfile
+     */
+    public Profile updateProfile(final Profile aProfile);
+
+    /**
      * delete profile
      *
      * @param anId
      */
     public void deleteProfile(final long anId);
-
-    /**
-     * edit profile
-     *
-     * @param aProfile
-     */
-    public Profile editProfile(final Profile aProfile);
 }
